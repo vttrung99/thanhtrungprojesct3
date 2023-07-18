@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Meo</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100%;
+        }
+
+        .form-container {
+            margin-top: 20px;
+        }
+        
+        .form-container input {
+            margin-right: 10px;
+        }
+        
+        .form-container button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form action="http://localhost:3001/api/v1/meos" method="POST" enctype="multipart/form-data">
+                <input name="name" type="text" placeholder="Meo name">
+                <input name="checked" type="checkbox">
+                <button type="submit">Add New Meo</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
